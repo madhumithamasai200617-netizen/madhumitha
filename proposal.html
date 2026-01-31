@@ -51,6 +51,62 @@
             background: #ddd;
         }
     </style>
+    <style>
+    body {
+        margin: 0;
+        height: 100vh;
+        background: 
+            linear-gradient(
+                rgba(0,0,0,0.45),
+                rgba(0,0,0,0.45)
+            ),
+            url("images/us.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        font-family: Arial, sans-serif;
+    }
+
+    .proposal-box {
+        background: rgba(255, 255, 255, 0.95);
+        width: 90%;
+        max-width: 420px;
+        margin: 120px auto;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        animation: pop 0.6s ease;
+        text-align: center;
+    }
+
+    @keyframes pop {
+        from { transform: scale(0.5); opacity: 0; }
+        to { transform: scale(1); opacity: 1; }
+    }
+
+    h1 {
+        color: #cc0033;
+    }
+
+    button {
+        padding: 12px 22px;
+        margin: 10px;
+        border: none;
+        border-radius: 30px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .yes {
+        background: #ff4d6d;
+        color: white;
+    }
+
+    .no {
+        background: #ddd;
+    }
+</style>
+
 </head>
 <body>
 
