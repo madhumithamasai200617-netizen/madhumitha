@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>One Question ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: linear-gradient(#ffccd5, #ffe6eb);
+        }
+
+        .proposal-box {
+            background: white;
+            width: 90%;
+            max-width: 400px;
+            margin: 100px auto;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            animation: pop 0.6s ease;
+        }
+
+        @keyframes pop {
+            from { transform: scale(0.5); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .proposal-box h1 {
+            color: #cc0033;
+        }
+
+        .buttons {
+            margin-top: 25px;
+        }
+
+        button {
+            padding: 12px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .yes {
+            background: #ff4d6d;
+            color: white;
+        }
+
+        .no {
+            background: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+<div class="proposal-box">
+    <h1>Will You Be My Valentine? 💕</h1>
+    <p>
+        Every moment with you means the world to me.  
+        I can’t imagine my days without you ❤️
+    </p>
+
+    <div class="buttons">
+        <button class="yes" onclick="yesClicked()">YES 💖</button>
+        <button class="no" onmouseover="moveButton(this)">NO 🙈</button>
+    </div>
+</div>
+
+<script>
+function yesClicked() {
+    document.body.innerHTML = `
+        <div style="margin-top:150px;">
+            <h1 style="color:#cc0033;">You Made Me the Happiest Person 💍❤️</h1>
+            <p>Forever starts now 💕</p>
+        </div>
+    `;
+}
+
+function moveButton(btn) {
+    btn.style.position = "absolute";
+    btn.style.top = Math.random() * 80 + "%";
+    btn.style.left = Math.random() * 80 + "%";
+}
+</script>
+
+</body>
+</html>
