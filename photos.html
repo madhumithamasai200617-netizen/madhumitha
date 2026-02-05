@@ -11,17 +11,12 @@
 </head>
 
 <style>
-    #LOVE {
+    #love {
         display: flex;
         align-items: center;
         justify-content: center;
         background-image: radial-gradient(khaki);
         height: 100px;
-    }
-
-    #click {
-        position: relative;
-        left: 320px;
     }
 
     .seri {
@@ -31,9 +26,9 @@
 
     .combine {
         display: flex;
-        gap: 60px;
+        gap: 40px;
         margin-top: 40px;
-        margin-left: 30px;
+        justify-content: center;
     }
 
     .madhu:first-child {
@@ -41,17 +36,16 @@
     }
 
     .ibox {
-        height: 500px;
+        height: 400px;
         width: 500px;
         background-color: burlywood;
-        margin-top: 40px;
+        margin: 40px auto;
         display: grid;
         place-items: center;
-        margin-left: 400px;
     }
 
     .oops {
-        height: 100px;
+        height: 80px;
         width: 400px;
         background-color: rgb(158, 216, 245);
         display: grid;
@@ -59,22 +53,18 @@
     }
 
     .lock {
-        height: 300px;
+        height: 250px;
         width: 430px;
         background-color: rgb(158, 216, 245);
         display: grid;
         place-items: center;
-    }
-
-    .ibox1 {
-        margin-left: 400px;
-        margin-top: 40px;
+        padding: 15px;
     }
 
     #footer {
         background-image: radial-gradient(khaki);
         width: 100%;
-        height: 220px;
+        height: 180px;
         text-align: center;
         margin-top: 30px;
     }
@@ -82,67 +72,63 @@
 
 <body>
 
-<!-- 🔊 BACKGROUND MUSIC (HIDDEN) -->
+<!-- 🔊 BACKGROUND MUSIC -->
 <audio id="bg-music" loop>
     <source src="innum-konjam-neram.mp3" type="audio/mpeg">
 </audio>
 
 <div id="love">
-    <div style="display: flex;">
+    <div style="display: flex; align-items: center; gap: 10px;">
         <h1>LOVE</h1>
         <img src="memories.jpg" style="height: 50px;width: 50px;">
     </div>
-    
 </div>
 
-<h2 class="seri" style="text-align: center;">Image Gallery of the Love</h2>
+<h2 class="seri text-center">Image Gallery of Love 💕</h2>
 
-<img src="photo2.jpg/16/300/350" style="margin-left: 530px;" id="tough">
+<!-- MAIN IMAGE -->
+<img src="photo2.jpg" id="tough" style="display:block;margin: auto; width:300px; height:350px;">
 
+<!-- THUMBNAILS -->
 <div class="combine">
-    <img src="photos3.jpg/id/16/200/250"
-        onmouseover="show('photos3.jpg/id/16/300/350',this)" class="madhu">
-    <img src="photos4.jpg/id/122/200/250"
-        onmouseover="show('photos4.jpg/id/122/300/350',this)" class="madhu">
-    <img src="photos5.jpg/id/190/200/250"
-        onmouseover="show('photos5.jpg/id/190/300/350',this)" class="madhu">
-    <img src="photo6.jpg/id/155/200/250"
-        onmouseover="show(photos6.jpg/id/155/300/350',this)" class="madhu">
-    <img src="memories2.jpg/id/47/200/250"
-        onmouseover="show(memories2.jpg/id/47/300/350',this)" class="madhu">
+    <img src="photos3.jpg" onmouseover="show('photos3.jpg',this)" class="madhu" width="150">
+    <img src="photos4.jpg" onmouseover="show('photos4.jpg',this)" class="madhu" width="150">
+    <img src="photos5.jpg" onmouseover="show('photos5.jpg',this)" class="madhu" width="150">
+    <img src="photos6.jpg" onmouseover="show('photos6.jpg',this)" class="madhu" width="150">
+    <img src="memories2.jpg" onmouseover="show('memories2.jpg',this)" class="madhu" width="150">
 </div>
 
 <div class="ibox">
     <div class="oops">
-        <h3>love life</h3>
+        <h3>Love Life 💖</h3>
     </div>
     <div class="lock">
-        <p style="padding: 15px;">
-            The love journey started on july 4th 2025...
+        <p>
+            The love journey started on July 4th, 2025 ❤️  
+            Every moment since then has been a beautiful memory.
         </p>
     </div>
 </div>
 
-</div>
-
 <div id="footer">
-    <h2 style="padding-top: 25px;"></h2>
-    <h5>Made with ❤️</h5>
+    <h5 style="padding-top: 40px;">Made with ❤️</h5>
 </div>
 
 <script>
     const difficult = document.getElementById("tough");
-    const priya = document.getElementsByClassName("likshani");
+    const mitha = document.getElementsByClassName("madhu");
 
     function show(url, smallImg) {
         difficult.src = url;
-        for (let i = 0; i < priya.length; i++) {
-            priya[i].style.border = "none";
+
+        for (let i = 0; i < mitha.length; i++) {
+            mitha[i].style.border = "none";
         }
+
         smallImg.style.border = "3px solid black";
     }
 
-    // 🎵 PLAY MUSIC ON FIRST CLICK (GitHub Pages SAFE)
+    // 🎵 Play music on first click
     document.addEventListener("click", () => {
         const music = document.getElementById("bg-music");
         music.volume = 0.5;
