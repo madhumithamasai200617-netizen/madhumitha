@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LOVE</title>
+
+    <link rel="icon" href="destination.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<style>
+    #LOVE {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: radial-gradient(khaki);
+        height: 100px;
+    }
+
+    #click {
+        position: relative;
+        left: 320px;
+    }
+
+    .seri {
+        font-style: oblique;
+        padding: 30px;
+    }
+
+    .combine {
+        display: flex;
+        gap: 60px;
+        margin-top: 40px;
+        margin-left: 30px;
+    }
+
+    .madhu:first-child {
+        border: 3px solid black;
+    }
+
+    .ibox {
+        height: 500px;
+        width: 500px;
+        background-color: burlywood;
+        margin-top: 40px;
+        display: grid;
+        place-items: center;
+        margin-left: 400px;
+    }
+
+    .oops {
+        height: 100px;
+        width: 400px;
+        background-color: rgb(158, 216, 245);
+        display: grid;
+        place-items: center;
+    }
+
+    .lock {
+        height: 300px;
+        width: 430px;
+        background-color: rgb(158, 216, 245);
+        display: grid;
+        place-items: center;
+    }
+
+    .ibox1 {
+        margin-left: 400px;
+        margin-top: 40px;
+    }
+
+    #footer {
+        background-image: radial-gradient(khaki);
+        width: 100%;
+        height: 220px;
+        text-align: center;
+        margin-top: 30px;
+    }
+</style>
+
+<body>
+
+<!-- 🔊 BACKGROUND MUSIC (HIDDEN) -->
+<audio id="bg-music" loop>
+    <source src="music/love-song.mp3" type="audio/mpeg">
+</audio>
+
+<div id="munaar">
+    <div style="display: flex;">
+        <h1>LOVE</h1>
+        <img src="destination.png" style="height: 50px;width: 50px;">
+    </div>
+    <div>
+        <a href="Home.html" class="btn btn-primary" id="click">Back to Home</a>
+    </div>
+</div>
+
+<h2 class="seri" style="text-align: center;">Image Gallery of the Love</h2>
+
+<img src="https://picsum.photos/id/16/300/350" style="margin-left: 530px;" id="tough">
+
+<div class="combine">
+    <img src="https://picsum.photos/id/16/200/250"
+        onmouseover="show('https://picsum.photos/id/16/300/350',this)" class="likshani">
+    <img src="https://picsum.photos/id/122/200/250"
+        onmouseover="show('https://picsum.photos/id/122/300/350',this)" class="likshani">
+    <img src="https://picsum.photos/id/190/200/250"
+        onmouseover="show('https://picsum.photos/id/190/300/350',this)" class="likshani">
+    <img src="https://picsum.photos/id/155/200/250"
+        onmouseover="show('https://picsum.photos/id/155/300/350',this)" class="likshani">
+    <img src="https://picsum.photos/id/47/200/250"
+        onmouseover="show('https://picsum.photos/id/47/300/350',this)" class="likshani">
+</div>
+
+<div class="ibox">
+    <div class="oops">
+        <h3>Mysteries in Munaar 📝</h3>
+    </div>
+    <div class="lock">
+        <p style="padding: 15px;">
+            The love journey started on july 4th 2025...
+        </p>
+    </div>
+</div>
+
+</div>
+
+<div id="footer">
+    <h2 style="padding-top: 25px;"></h2>
+    <h5>Made with ❤️</h5>
+</div>
+
+<script>
+    const difficult = document.getElementById("tough");
+    const priya = document.getElementsByClassName("likshani");
+
+    function show(url, smallImg) {
+        difficult.src = url;
+        for (let i = 0; i < priya.length; i++) {
+            priya[i].style.border = "none";
+        }
+        smallImg.style.border = "3px solid black";
+    }
+
+    // 🎵 PLAY MUSIC ON FIRST CLICK (GitHub Pages SAFE)
+    document.addEventListener("click", () => {
+        const music = document.getElementById("bg-music");
+        music.volume = 0.5;
+        music.play();
+    }, { once: true });
+</script>
+
+</body>
+</html>
