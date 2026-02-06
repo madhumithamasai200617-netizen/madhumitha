@@ -89,10 +89,23 @@
 <!-- MAIN IMAGE -->
 <img src="photo2.jpg" id="tough" style="display:block;margin: auto; width:300px; height:350px;">
 <img id="tough" src="photos3.jpg" width="300" style="display:block;margin:auto;">
-    
+    <div class="combine">
+        <img src="https://picsum.photos/id/16/200/250"
+            onmouseover="show('https://picsum.photos/id/16/300/350',this)" class="likshani">
+        <img src="https://picsum.photos/id/122/200/250"
+            onmouseover="show('https://picsum.photos/id/122/300/350',this)" class="likshani">
+        <img src="https://picsum.photos/id/190/200/250"
+            onmouseover="show('https://picsum.photos/id/190/300/350',this)" class="likshani">
+        <img src="https://picsum.photos/id/155/200/250"
+            onmouseover="show('https://picsum.photos/id/155/300/350',this)" class="likshani">
+        <img src="https://picsum.photos/id/47/200/250"
+            onmouseover="show('https://picsum.photos/id/47/300/350',this)" class="likshani">
+    </div>
+   
 <div class="ibox">
     <div class="oops">
         <h3>Love Life 💖</h3>
+        
     </div>
     <div class="lock">
         <p>
@@ -120,7 +133,6 @@
         smallImg.style.border = "3px solid black";
     }
 
-    // 🎵 Play music on first click
     document.addEventListener("click", () => {
         const music = document.getElementById("bg-music");
         music.volume = 0.5;
