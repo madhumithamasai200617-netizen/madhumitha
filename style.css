@@ -125,4 +125,46 @@ nav a:hover::after {
     transform: translateY(-110vh) scale(1.5);
     opacity: 0;
   }
+  /* Notes animation */
+.note {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px 30px;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+
+  opacity: 0;
+  transform: translateY(20px);
+  animation: noteFade 1s forwards;
+  cursor: pointer;
+}
+
+@keyframes noteFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Heart burst */
+.burst-heart {
+  position: absolute;
+  font-size: 18px;
+  pointer-events: none;
+  animation: burst 1s ease-out forwards;
+}
+
+@keyframes burst {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--x), var(--y)) scale(1.5);
+    opacity: 0;
+  }
+}
+
 }
