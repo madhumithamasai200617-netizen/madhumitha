@@ -1,59 +1,122 @@
-body {
-    font-family: 'Arial', sans-serif;
-    background: #ffe6eb;
-    text-align: center;
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  overflow: hidden;
+  color: white;
+}
+
+/* Navigation */
 nav {
-    background: #ff4d6d;
-    padding: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
 }
 
 nav a {
-    color: white;
-    margin: 15px;
-    text-decoration: none;
-    font-weight: bold;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
 }
 
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: white;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Hero */
 .hero {
-    padding: 80px 20px;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-h1, h2 {
-    color: #cc0033;
+.hero h1 {
+  font-size: 3rem;
 }
 
-.notes {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+.hero p {
+  font-size: 1.2rem;
+  margin-top: 10px;
 }
 
-.note {
-    background: white;
-    padding: 20px;
-    margin: 15px;
-    width: 200px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+/* Fade-in text */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s forwards;
 }
 
-.gallery img {
-    width: 250px;
-    margin: 15px;
-    border-radius: 15px;
+.delay {
+  animation-delay: 1s;
 }
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  from {
+    transform: translateY(20px);
+  }
+}
+
+/* Surprise button */
 .surprise-btn {
-    background: #ff4d6d;
-    color: white;
-    border: none;
-    padding: 15px 25px;
-    font-size: 25px;
-    border-radius: 40px;
-    cursor: pointer;
-    margin-top: 40px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #ff4d6d;
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  animation: pulse 1.5s infinite;
 }
 
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Floating hearts */
+.heart {
+  position: absolute;
+  bottom: -20px;
+  font-size: 20px;
+  animation: floatUp 6s linear infinite;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-110vh) scale(1.5);
+    opacity: 0;
+  }
+}
