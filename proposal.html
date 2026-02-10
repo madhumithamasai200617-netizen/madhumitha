@@ -68,16 +68,17 @@
     }
 
     .proposal-box {
-        background: rgba(255, 255, 255, 0.95);
-        width: 90%;
-        max-width: 420px;
-        margin: 120px auto;
-        padding: 30px;
-        border-radius: 20px;
-        box-shadow: 0 15px 30px rgba(0,0,0,0.3);
-        animation: pop 0.6s ease;
-        text-align: center;
-    }
+    background: rgba(255, 255, 255, 0.95);
+    width: 90%;
+    max-width: 420px;
+    margin: 120px auto;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    animation: pop 0.6s ease;
+    text-align: center;   /* ✅ THIS CENTERS ALL WORDINGS */
+}
+
 
     @keyframes pop {
         from { transform: scale(0.5); opacity: 0; }
@@ -132,7 +133,7 @@
 <script>
 function yesClicked() {
     document.body.innerHTML = `
-        <div style="margin-top:200px;">
+        <div style="margin-top:200px; text-align:center;">
             <h1 style="color:black;">love you mama💍❤️</h1>
             <p>nee naa enaku romba istam 💕</p>
             <p>naa unkitta eppovum express pannathu illa but by heart naa romba love pandran </p>
