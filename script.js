@@ -46,6 +46,30 @@ notes.forEach(note => {
     }
   });
 });
+<script>
+  const images = document.querySelectorAll('.gallery-grid img');
+  const lightbox = document.getElementById('valentineLightbox');
+  const lightboxImg = document.getElementById('valentineImg');
+  const closeBtn = document.querySelector('.valentine-lightbox .close');
+
+  images.forEach(image => {
+    image.addEventListener('click', () => {
+      lightbox.style.display = 'flex';
+      lightboxImg.src = image.src;
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+  });
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      lightbox.style.display = 'none';
+    }
+  });
+</script>
+
 
 
 setInterval(createHeart, 300);
