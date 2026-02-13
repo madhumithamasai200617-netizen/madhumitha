@@ -196,5 +196,72 @@ nav a:hover::after {
 .gallery-img:hover {
   transform: scale(1.08);
 }
+.valentine-gallery {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #ffe6eb, #fff0f5);
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.valentine-gallery h2 {
+  font-size: 2.5rem;
+  color: #d6336c;
+  margin-bottom: 30px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 16px;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(214, 51, 108, 0.25);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.08) rotate(-1deg);
+  box-shadow: 0 20px 40px rgba(214, 51, 108, 0.4);
+}
+
+/* Lightbox */
+.valentine-lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 182, 193, 0.95);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9999;
+}
+
+.valentine-lightbox img {
+  max-width: 85%;
+  max-height: 75%;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.valentine-lightbox .caption {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #a61e4d;
+}
+
+.valentine-lightbox .close {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  font-size: 40px;
+  color: #a61e4d;
+  cursor: pointer;
+}
 
 }
