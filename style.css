@@ -209,6 +209,10 @@ nav a:hover::after {
   transform: scale(1.07);
   box-shadow: 0 20px 40px rgba(214, 51, 108, 0.4);
 }
+.gallery-grid img {
+  height: 320px;   /* ⬅ increase/decrease this */
+}
+
 
 /* ================= LIGHTBOX ================= */
 .valentine-lightbox {
