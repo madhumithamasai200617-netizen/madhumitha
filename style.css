@@ -104,6 +104,10 @@ nav a:hover::after {
   animation: pulse 1.5s infinite;
   box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
+.surprise-btn {
+  z-index: 999;
+}
+
 
 @keyframes pulse {
   0%   { transform: translate(-50%, -50%) scale(1); }
